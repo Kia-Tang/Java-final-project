@@ -1,0 +1,529 @@
+:root{
+    --pink:#8E8F6E;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    margin:0; padding:0;
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#343933;
+    padding:1rem;
+    margin:2rem 0;
+    background-color:#C9C3B0;
+}
+
+.heading span{
+    color:var(--pink);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background:#333;
+    color:#fff;
+    padding:.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background:var(--pink);
+}
+/*header 上方菜单栏  */
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background:#fff;
+    padding:2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color:#666;
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header .icons a{
+    font-size: 2rem;
+    color:#333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color:var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url(../images/HomeBG.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color:#53534F;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color:#53534F;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:#53534F;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+/* video container */
+.video-container{
+    position: absolute;
+    width: 100%;
+    height: 50vh; /* 全视口高度 */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+
+/* 视频元素的样式，确保覆盖整个容器 */
+.video-container video {
+    position: absolute;
+    /* top和left是对视频大小*/
+    top: 50%;  
+    left: 50%;
+    min-width: 100%;
+    min-height: 40%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: green; /* 保证加载时背景是黑色 */
+}
+
+/* 标题的样式 */
+.video-container .content1{
+    position: absolute;
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 精确居中 */
+    color: white; /* 字体颜色 */
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 文字阴影，提升可读性 */
+    font-size: 2rem; /* 字体大小 */
+    z-index: 10; /* 确保标题在视频上方 */
+}
+
+
+/* data-container */
+.data-container{
+    /* background: #90a8ff; */
+    display: flex;
+    flex-wrap: wrap;
+    /* 调整间距以优化格局 */
+    gap: 1rem;
+    /* 必须有，与上方视频有距离 */
+    padding-top: 40rem;
+    padding-bottom: 2rem;
+    margin: 0 10rem;
+    justify-content: space-around;
+}
+
+.data-container .data{
+    text-align: center;
+}
+
+.data-container .data h3{
+    color:#333;
+    padding-bottom: .5rem;
+    margin: 1 0 0.5rem;
+    font-size: 3.5rem;
+}
+.data-container .data span{
+    color:#999;
+    font-size: 2rem;
+}
+
+/* <!-- Company Introduction section starts--> */
+.Goat-intro {
+    display: flex; /* 使用flex布局来分配子元素 */
+    align-items: center; /* 垂直居中对齐 */
+    margin: 8rem 20rem;
+    /* padding: 10rem; */
+}
+/* color */
+.Goat-intro1 {
+    display: flex; /* 使用flex布局来分配子元素 */
+    align-items: center; /* 垂直居中对齐 */
+    margin: 8rem 0;
+    background:#327039;
+}
+
+.Goat-intro .image-container {
+    flex: 1; /* 图像和文本占据相同的空间 */
+    max-width: 40%;
+}
+
+.Goat-intro .image-container img {
+    width: 100%; /* 图像宽度调整到容器宽度 */
+    height: auto; /* 高度自动调整保持纵横比 */
+}
+/* color */
+.Goat-intro1 .image-container img {
+    width: 80%; /* 图像宽度调整到容器宽度 */
+    height: auto; /* 高度自动调整保持纵横比 */
+    margin-left: 10rem;
+}
+.Goat-intro .text-container {
+    flex: 1; /* 文本内容同样占据50%的空间 */
+    padding: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+/* color */
+.Goat-intro1 .text-container {
+    flex: 1; /* 文本内容同样占据50%的空间 */
+    padding: 20px;
+    margin-right: 15rem;
+    color:#fff;
+}
+
+.Goat-intro .text-container h2 {
+    margin-bottom: 10px; /* 标题和段落之间的间距 */
+    font-size: 28px; /* 标题字体大小 */
+}
+/* color */
+.Goat-intro1 .text-container h2 {
+    margin-bottom: 10px; /* 标题和段落之间的间距 */
+    font-size: 35px; /* 标题字体大小 */
+}
+.Goat-intro1 .text-container h3{
+    color:#51cd3e;
+    padding-bottom: .5rem;
+    margin: 1 0 0.5rem;
+    font-size: 3.2rem;
+}
+.Goat-intro1 .text-container h4{
+    color:#e7ffe3;
+    font-size: 3.6rem;
+}
+
+.Goat-intro .text-container p {
+    margin-top: 3rem;
+    text-align: justify; /* 文本两端对齐 */
+    font-size: 16px; /* 段落文字大小 */
+}
+
+
+/* staff section*/
+.title1{
+    padding:.2rem;
+}
+
+.title1 .heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#343933;
+    padding:1rem;
+    margin:.5rem 0;
+    background-color:#C9C3B0;
+}
+
+/* staff section square */
+.testimonial{
+	padding-top:100px;
+    margin-bottom: 5rem;
+}
+.small-container{
+	max-width:1380px;
+	margin:auto;
+	padding-right:25px;
+	padding-left:25px;
+}
+.row{
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+.col-3{
+	flex-basis: 25%;
+	min-width:200px;
+	margin-bottom:30px;
+}
+.testimonial .col-3{
+	text-align:center;
+	padding:40px 20px;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+	cursor:pointer;
+	transition:transform0.5s;
+}
+.testimonial .col-3 .img{
+	width:100px;
+	margin-top:20px;
+	border-radius:50%;
+}
+.testimonial .col-3:hover{
+	transform: translateY(-10px);
+}
+.col-3 p{
+	font-size:20px;
+	margin:12px 0;
+	color:#777;	
+}
+.testimonial .col-3 h3{
+	font-weight:60px;
+	color:#555;
+	font-size:16px;
+}
+
+/* media queries  */
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+}
+
+/* contact section */
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.contact .row form{
+    flex:1 1 40rem;
+    padding:2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.contact .row .image{
+    align-items: center;
+    flex:1 1 40rem;
+}
+
+.contact .row .image img{
+    margin-left: 10rem;
+    width: 75%;
+}
+
+.contact .row form .box{
+    padding:1rem;
+    font-size: 1.7rem;
+    color:#333;
+    text-transform: none;
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin:.7rem 0;
+    width: 100%;
+}
+
+.contact .row form .box:focus{
+    border-color: var(--pink);
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+/* footer section */
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color:#333;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color:#666;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--pink);
+    text-decoration: underline;
+}
+
+.footer .box-container .box  img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color:#333;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding-bottom: 9rem;
+}
+
+.footer .credit span{
+    color:var(--pink);
+}
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position:absolute;
+        top:100%; left:0; right:0;
+        background:#eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+    
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
+
+.responsive-image{
+	width:100%;
+	height:auto;
+}
+
+
+
+     

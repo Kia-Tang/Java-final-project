@@ -1,0 +1,144 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['user_email'])) {
+        header('Location: login.php');
+        exit;
+    }
+    
+    ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Goat</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/CISC7105-PairAssgn-Pair09-home.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">Happy Goat<span>.</span></a>
+
+    <nav class="navbar">
+        <a href="cisc7105-PairAssgn-home.php">Home</a >
+        <a href="Clothes.php">Clothes</a >
+        <a href="Food.php">Food</a >
+        <a href="about me.php">About us</a >
+    </nav>
+
+    <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+            <?php if (isset($_SESSION['user_email'])): ?>
+        <a href="profile.php?name=<?= urlencode($_SESSION['user_email']); ?>">
+            <?= htmlspecialchars($_SESSION['user_email']); ?>
+        </a>
+    <?php endif; ?>
+        </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>All for Sheep</h3>
+        <span> Natural & Savannah </span>
+        <p> Our mission is to make our delicious, nutritious, warm and healthy sheep products available to people all over the world.we hope you will like and follow us!</p>
+        <a href="#" class="btn">shop now</a>
+    </div>
+    
+</section>
+
+<!-- home section ends -->
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span> Choose </span> us </h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="images/羊羊视频.mp4" loop autoplay muted></video>
+            <h3>Specializing in Goat</h3>
+        </div>
+
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>We are an environmentally conscious company and our goal is to provide our customers with high quality goat's milk, felted wool crafts, horn combs and wool cashmere while protecting our planet.</p>
+            <p>Our sheep are handpicked from our own organic farms and they enjoy a free range life without any hormones or antibiotics. They receive fresh grass and fruit every day, and a professional veterinarian regularly checks on their health. Our sheep are not only healthy looking but also have a friendly disposition. They love to interact with humans and sometimes give us some surprises, such as a flower or a stone.</p>
+            <p>Our wool cashmere is carefully selected and processed to ensure the quality of the wool. Our goat's milk is pure and natural, not treated with any additives or preservatives, rich in protein and calcium, and suitable for all ages. Our goat's horn comb is beautifully crafted and activates blood circulation. Our wool apparel is warm and fashionable, come and buy it!
+            <a href="#" class="btn">Know more</a>     
+        </div>
+    </div>
+
+</section>
+
+
+<!-- about section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">products</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">france</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a>
+            <a href="#">example@gmail.com</a>
+            <a href="#">mumbai, india - 400104</a>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> <span>CISC7105 Internet Programming and Java Technology - 2024:mc353393 TangQifeng mc351758| mc351227 LIANG ZIXIN| HuangJiaqi| mc352574 LuChang  </span> </div>
+
+</section>
+
+<!-- footer section ends -->
+

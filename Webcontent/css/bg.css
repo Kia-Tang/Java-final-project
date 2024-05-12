@@ -1,0 +1,60 @@
+/* 在这里设置背景图片 */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* 添加一些样式以美化表单 */
+form {
+    background: rgba(10, 8, 8, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(155, 190, 161, 0.921);
+}
+
+h1 {
+    text-align:center;
+    margin-top: 50px; /* 或者根据你的需要调整 */
+    color: #fff; /* 根据你的背景图片颜色可能需要调整 */
+}
+
+.gotohome{
+    font-size: 32px;
+    font-style:oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 32px;
+    font-style:oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+.signup {
+    flex: 0 0 40%;                   /* 不允许grow和shrink，宽度固定为40% */
+    padding: 20px;
+}
+
+#signup {
+    flex-basis: 100%;           /* 表单占据50%的空间，根据实际需要调整 */
+}
+
+.text {
+    flex: 1;                         /* 剩余空间由文本区域占据 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}

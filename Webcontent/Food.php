@@ -1,0 +1,654 @@
+
+<?php
+    session_start();
+    if (!isset($_SESSION['user_email'])) {
+        header('Location: login.php');
+        exit;
+    }
+    
+    ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HappyGoat products page</title>
+
+<!-- font awesome cdn link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/css/ionicons.min.css">
+
+<link rel="stylesheet" href="css/CISC7105-PairAssgn-Pair09-style.css">
+</head>
+<body>
+<header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="#" class="logo">Happy Goat<span>.</span></a>
+    <nav class="navbar">
+        <a href="cisc7105-PairAssgn-home.php">Home</a >
+        <a href="Clothes.php">Clothes</a >
+        <a href="Food.php">Food</a >
+        <a href="about me.php">About us</a >
+    </nav>
+    <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+            <?php if (isset($_SESSION['user_email'])): ?>
+        <a href="profile.php?name=<?= urlencode($_SESSION['user_email']); ?>">
+            <?= htmlspecialchars($_SESSION['user_email']); ?>
+        </a>
+    <?php endif; ?>
+        </div>
+
+</header>
+
+
+<!-- products section starts  -->
+
+<section class="products" id="products">
+
+ <section class="cta">
+     <div class="container">
+        <p class="section-subtitle">--Summer Offer--</p>
+
+        <h2 class="h2 section-title">Up To 40% Off All Product.</h2>
+
+        <p class="cta-text">
+            Promotional offer is valid on 4.16.5, welcome to shop!
+        </p>
+
+        <a href="./shop.html" class="btn btn-primary">
+          <span>Shop Now</span>
+
+           <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+ </section>
+
+    <div class="box-container">
+          
+
+          <ul class="filter-list">
+
+            <li>
+              <button class="filter-btn  active">All</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Goat's milk</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Goat's cheese</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Milk powder</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Milk flakes</button>
+            </li>
+
+          </ul>
+    
+
+        <div class="box">
+
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="images/儿童奶粉.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./children powder.php">Children's goat's milk powder</a></h3>
+                <div class="price"> $52.99 <span>$45.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-15%</span>
+            <div class="image">
+                <img src="images/厚酸奶.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.php">Thick and sour goat's milk</a></h3>
+                <div class="price"> $6.99 <span>$7.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="images/羊奶2.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./wool coat.html">Pure goat's milk</a></h3>
+                <div class="price"> $8.99 <span>$10.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="image">
+                <img src="images/奶粉.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.php">Milk powder</a></h3>
+                <div class="price"> $62.99 <span>$55.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-17%</span>
+            <div class="image">
+                <img src="images/羊奶.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.html">Pure goat's milk</a></h3>
+                <div class="price"> $10.00 <span>$10.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-3%</span>
+            <div class="image">
+                <img src="images/羊奶酪.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.php">Feta cheese</a></h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-18%</span>
+            <div class="image">
+                <img src="images/羊奶布丁.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.html">Sheep's milk pudding</a></h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="images/奶片2.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.php"></a>Fruit-flavoured milk tablet</h3>
+                <div class="price"> $7.99 <span>$10.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="images/奶糖.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="h4 card-title"><a href="./Thick milk.php">Toffee</a></h3>
+                <div class="price"> $2.99 <span>$5.99</span> </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+ 
+ 
+ <section class="top-product">
+        <div class="container">
+	       <p class="section-subtitle2">-- Trendy Products --</p>
+
+
+          <ul class="top list">
+
+            <li class="top-item">
+              <div class="top-card">
+
+                <figure class="card-banner">
+                  <img src="images/补充1.jpg" width="100" height="100" loading="lazy"
+                    alt="Fresh Orangey">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Add to Whishlist</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Quick View</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">
+                    <a href="./product-details.html">Sheep's milk biscuit</a>
+                  </h3>
+
+                  <div class="price-wrapper">
+                    <del class="del">$75.00</del>
+
+                    <data class="price" value="85.00">$85.00</data>
+                  </div>
+
+                  <button class="btn btn-primary">Add to Cart</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="top-item">
+              <div class="top-card">
+
+                <figure class="card-banner">
+                  <img src="images/补充2.jpg" width="100" height="100" loading="lazy" alt="key Lime">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Add to Whishlist</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Quick View</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">
+                    <a href="./children powder.php">Goat's milk</a>
+                  </h3>
+
+                  <div class="price-wrapper">
+                    <del class="del">$75.00</del>
+
+                    <data class="price" value="85.00">$65.00</data>
+                  </div>
+
+                  <button class="btn btn-primary">Add to Cart</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="top-item">
+              <div class="top-card">
+
+                <figure class="card-banner">
+                  <img src="images/补充3.jpg" width="100" height="100" loading="lazy"
+                    alt="Fresh Watermelon">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Add to Whishlist</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Quick View</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">
+                    <a href="./children powder.php">Goat's milk cheese</a>
+                  </h3>
+
+                  <div class="price-wrapper">
+                    <del class="del">$62.00</del>
+
+                    <data class="price" value="85.00">$55.00</data>
+                  </div>
+
+                  <button class="btn btn-primary">Add to Cart</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="top-item">
+              <div class="top-card">
+
+                <figure class="card-banner">
+                  <img src="images/奶片.jpg" width="100" height="100" loading="lazy" alt="Stobery">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Add to Whishlist</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Quick View</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">
+                    <a href="./children powder.html">milk tablet</a>
+                  </h3>
+
+                  <div class="price-wrapper">
+                    <del class="del">$56.00</del>
+
+                    <data class="price" value="85.00">$50.00</data>
+                  </div>
+
+                  <button class="btn btn-primary">Add to Cart</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="top-item">
+              <div class="top-card">
+
+                <figure class="card-banner">
+                  <img src="images/酸羊奶.jpg" width="100" height="100" loading="lazy"
+                    alt="Pomagranate Fruit">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Add to Whishlist</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Quick View</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">
+                    <a href="./children powder.php">goat's milk</a>
+                  </h3>
+
+                  <div class="price-wrapper">
+                    <del class="del">$25.00</del>
+
+                    <data class="price" value="85.00">$20.00</data>
+                  </div>
+
+                  <button class="btn btn-primary">Add to Cart</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="top-item">
+              <div class="top-card">
+
+                <figure class="card-banner">
+                  <img src="images/补充4.jpg" width="100" height="100" loading="lazy"
+                    alt="Lens Results Broccoli">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Add to Whishlist</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Quick View</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">
+                    <a href="./children powder.php">woolen felt</a>
+                  </h3>
+
+                  <div class="price-wrapper">
+                    <del class="del">$42.00</del>
+
+                    <data class="price" value="85.00">$35.00</data>
+                  </div>
+
+                  <button class="btn btn-primary">Add to Cart</button>
+
+                </div>
+
+              </div>
+            </li>
+           </ul>
+      </section>
+ 
+
+ <section class="section partner">
+        <div class="container">
+
+          <p class="section-subtitle"> -- Organic Product --</p>
+
+          <h2 class="section-title">Authentication</h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="partner-item">
+              <figure class="partner-logo">
+                <img src="images/partner-1.png" width="132" height="134" loading="lazy" alt="Partner logo">
+              </figure>
+            </li>
+
+            <li class="partner-item">
+              <figure class="partner-logo">
+                <img src="images/partner-2.png" width="132" height="134" loading="lazy" alt="Partner logo">
+              </figure>
+            </li>
+
+            <li class="partner-item">
+              <figure class="partner-logo">
+                <img src="images/partner-3.png" width="132" height="134" loading="lazy" alt="Partner logo">
+              </figure>
+            </li>
+
+            <li class="partner-item">
+              <figure class="partner-logo">
+                <img src="images/partner-4.png" width="132" height="134" loading="lazy" alt="Partner logo">
+              </figure>
+            </li>
+
+            <li class="partner-item">
+              <figure class="partner-logo">
+                <img src="images/partner-5.png" width="132" height="134" loading="lazy" alt="Partner logo">
+              </figure>
+            </li>
+
+            <li class="partner-item">
+              <figure class="partner-logo">
+                <img src="images/partner-6.png" width="132" height="134" loading="lazy" alt="Partner logo">
+              </figure>
+            </li>
+
+          </ul>
+
+        </div>
+        </div>
+      </section>
+
+<!-- prodcuts section ends -->
+
+<!-- footer section starts  -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">products</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">france</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a>
+            <a href="#">example@gmail.com</a>
+            <a href="#">mumbai, india - 400104</a>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> <span> CISC7105 Internet Programming and Java Technology - 2024:mc353393 TangQifeng mc351758| mc351227 LIANG ZIXIN| HuangJiaqi| mc352574 LuChang </span>  </div>
+
+</section>
+
+<!-- footer section ends -->
+
+</body>
+</html>

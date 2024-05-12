@@ -1,0 +1,64 @@
+body {
+    background-image: url('../images/profile.jpg'); /* 修改这里为你的图片路径 */
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+form {
+    background: rgba(10, 8, 8, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(155, 190, 161, 0.921);
+    width: 1000px;
+}
+    .form-container {
+    margin: 0 auto; /* Centers the form in the page */
+    max-width: 800px; /* Or any max-width you prefer */
+    padding: 20px; /* This adds some padding inside the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .form-row {
+        display: flex;
+        justify-content: space-around; /* This will give more space between the form elements */
+        margin-bottom: 20px; /* Increase the space between the rows */
+    }
+
+    .form-row > label,
+    .form-row > input,
+    .form-row > select,
+    .form-row > textarea {
+        width: 48%; /* Adjust the width to control the spacing */
+        margin-right: 10px; /* You can adjust this as well */
+    }
+
+    .form-row > label:last-child,
+    .form-row > input:last-child,
+    .form-row > select:last-child,
+    .form-row > textarea:last-child {
+        margin-right: 0; /* Removes the margin from the last element */
+    }
+    .button, button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px; /* 在按钮和表单之间添加空间 */
+        background-color: #0f4c64; /* 按钮背景色 */
+        color: white; /* 文字颜色 */
+        text-align: center;
+        text-decoration: none;
+        border: none; /* 去掉边框 */
+        border-radius: 5px; /* 轻微的圆角 */
+        cursor: pointer; /* 鼠标悬停时显示指针 */
+        transition: background-color 0.3s; /* 平滑的背景色过渡效果 */
+    }
+    
+    .button, button:hover {
+        background-color: #0f4c64; /* 鼠标悬停时的背景色变深 */
+    }
+    
